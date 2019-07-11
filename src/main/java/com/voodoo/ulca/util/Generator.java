@@ -7,6 +7,7 @@ import java.util.Set;
 public class Generator {
 
     //生成heroClass
+    @Deprecated
     public static void generateHero(String sourcePath, String targetPath, String packageName, String interfaceName) {
         JSONObject heroJson = JsonUtil.getJsonObjectFromFile(sourcePath);
         Set<String> keys = heroJson.keySet();
@@ -31,5 +32,7 @@ public class Generator {
                 "Hero"
                 );
         generateSynergy();*/
+        JsonUtil.splitJsonToFile("src\\main\\resources\\scripts\\items.json",
+                "src\\main\\java\\com\\voodoo\\ulca\\entity\\item\\");
     }
 }
