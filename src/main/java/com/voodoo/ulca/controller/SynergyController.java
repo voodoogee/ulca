@@ -36,9 +36,6 @@ public class SynergyController {
             if(hero.has("keywords") && hero.getString("keywords").contains(synergyName)){
                 result.put(heroName, heroMap.get(heroName));
             }
-            if(heroName == "viper"){
-                System.out.println(hero.getString("keywords"));
-            }
         }
         return result.toString();
     }
